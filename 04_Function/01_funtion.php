@@ -8,16 +8,22 @@
 <body>
       <h1> Function</h1>
       <!-- PHP function is a piece of code that can be reused many times. It can take input as argument list and return value. 
-        There are thousands of built-in functions in PHP.-->
+          There are thousands of built-in functions in PHP.-->
 
           <?php
                
                 function disp()
                 {
                         echo"hi prashant how are you";
+                        echo"</br>i am fine";
+
                 }
 
                  disp(); // fucntion calling 
           ?>
+
+        
+
+  
 </body>
 </html>
