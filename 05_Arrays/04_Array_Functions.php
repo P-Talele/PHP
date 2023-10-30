@@ -13,7 +13,7 @@
       
        <?php
                 $arr=array("prashant","Ashish","Rohot","kartik");
-                echo"$arr[0]=$arr[1]=$arr[2]=$arr[3]";
+                  echo"$arr[0]=$arr[1]=$arr[2]=$arr[3]";
         ?>
 
               <h2>2  PHP array_change_key_case() function</h2>
@@ -71,14 +71,13 @@
                       <?php
                        $arr=array("prashant","talele","Ashish");
                        $rev=array_reverse($arr);
-
                        foreach($rev as $a)
                        {
                           echo $a."  ";
                           echo"</br>";
                         }
 
-                      ?>
+                       ?>
 
                       <h2> 7 PHP array_search() function</h2>
 
@@ -87,31 +86,34 @@
                         
              
                 <?php
-                 $arr=array("prashant","talele","Ashish");
-
+                   $arr=array("prashant","talele","Ashish");
                    $key=array_search("prashant",$arr);
                  
                     if($key) 
                     {
                         echo"you are all  ready Loginned";
                     }
-                    else  {
-                            echo"you are not  Loginned";
-                          }  
+                    else 
+                     {
+                      echo"you are not  Loginned";
+                     }  
                 
                 ?>
-  <h2>PHP array_intersect() function</h2>  
-  <!--PHP array_intersect() function--->
+               <h2>PHP array_intersect() function</h2>  
+               <!--PHP array_intersect() function--->
 
-  <?php    
- $name1=array("sonoo","john","vivek","smith");    
- $name2=array("umesh","sonoo","kartik","smith");    
- $name3=array_intersect($name1,$name2);  
-  foreach( $name3 as $n )    
-  {    
-    echo "$n<br />";    
- }    
-   ?>   
+               <?php    
+               $name1=array("sonoo","john","vivek","smith");    
+               $name2=array("umesh","sonoo","kartik","smith");    
+               $name3=array_intersect($name1,$name2);  
+               foreach( $name3 as $n )    
+               {    
+                   echo "$n<br />";    
+               }    
+                ?>   
+
+
+
           
 </body>
 </html>
