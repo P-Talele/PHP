@@ -12,9 +12,8 @@
          $str='Hello text within single quote';  
          echo $str;  
        ?>  
-
-          <?php  
-          $str1='Hello text   
+         <?php  
+          $str1='Hello text       
           multiple line  
           text within single quoted string';  
           $str2='Using double "quote" directly inside single quoted string';  
