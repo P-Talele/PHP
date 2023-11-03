@@ -8,7 +8,13 @@ class DemoController extends Controller
 {
     //   
         public function index()
-        {
-           return view('login');
-        }
+         {
+             return view('login');
+         }
+    public function resiter(Request $request)
+         {
+             echo"<pre>";
+             print_r($request->all());
+         }
 }
+ 
