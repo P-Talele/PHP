@@ -24,11 +24,11 @@
              <h3>PHP bin2hex() Function</h3>
               <!---PHP bin2hex() function is used to convert string value of ASSCII characters to hexadecimal value.--->
 
-         <?php
+          <?php
               $str="Java Is programming languages";
               echo"Given String</br>";
               echo"By Using bin2hex Function()=".bin2hex($str)."</br>"; 
-              ?> 
+           ?> 
      
          
 </body> 
