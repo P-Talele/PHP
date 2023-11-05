@@ -12,9 +12,9 @@
          $fact=1;
        for($i=1; $i<=6; $i++)
          {
-        $fact=$fact+$i;
+            $fact=$fact+$i;
          }
-            echo"$num=factorial of ".$fact;
+             echo"$num=factorial of ".$fact;
        ?>
 </body>
 </html>
