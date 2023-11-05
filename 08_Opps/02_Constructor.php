@@ -14,18 +14,34 @@
              4>  In order to run a parent constructor, a call to parent::__construct(). ----->
 
   <h2>Example 1</h2>
-
+  
     <?php
       class Example 
       {
            public  function  Display()
              {
-              echo"this is Construor";      
+                echo"this is not  Construor";      
              }
         }
 
            $obj=new Example();
-    ?>
+         //  $obj->Display();
+           $obj=new Example();
+       ?>
+ <h4>--------------------------------------------------------------------------------------------------------------------</h4>
+        <?php
+         
+           class Cricket 
+           {
+               public function  __construct()
+               {
+                   echo"This is Constructor";
+               }
+           } 
+
+               $obj=new Cricket();
+
+        ?>
     
 </body>
 </html>
