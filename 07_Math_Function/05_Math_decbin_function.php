@@ -10,8 +10,9 @@
     <!---The decbin() function converts decimal number into binary. It returns binary number as a string.--->
     <?php  
        echo (decbin(2). "<br/>");  
-       echo (decbin(10)."<br/>");  
+       echo (decbin(10)."<br/>");    
        echo (decbin(22)."<br/>");
      ?>  
+     
 </body>
 </html>
