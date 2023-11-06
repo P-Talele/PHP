@@ -41,7 +41,22 @@
 
                $obj=new Cricket();
 
-        ?>
+        ?>  
+           <?php
+         
+         class bcci
+         {
+             public function  bcci()
+             {
+                 echo"bord of cricket for control";
+             }
+         } 
+
+             $obj=new Cricket();
+
+      ?>  
+
+         
     
 </body>
 </html>
