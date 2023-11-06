@@ -4,7 +4,14 @@ use App\Http\Controllers\DemoController;
 
 
 
- 
+
+
+
+
 Route::get('/login',[DemoController ::class, 'index']);
-Route::post('/login',[DemoController ::class, 'resiter']);
+Route::post('/login',[DemoController ::class,'resister']);
+Route::post('/resister',[DemoController ::class,'resister']);
+
+
+
 

@@ -35,7 +35,7 @@
            {
                public function  __construct()
                {
-                   echo"This is Constructor";
+                   echo"This is Default  Constructor</br>";
                }
            } 
 
@@ -48,11 +48,11 @@
          {
              public function  bcci()
              {
-                 echo"bord of cricket for control";
+                 echo"bord of cricket for control</br>";
              }
          } 
 
-             $obj=new Cricket();
+            $obj=new bcci();
 
       ?>  
 

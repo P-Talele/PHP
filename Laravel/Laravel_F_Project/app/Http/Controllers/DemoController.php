@@ -7,14 +7,15 @@ use Illuminate\Http\Request;
 class DemoController extends Controller
 {
     //   
-        public function index()
+         public function index()
          {
-             return view('login');
+              return view('login');
          }
-    public function resiter(Request $request)
+    public function  resister(Request $request)
          {
-             echo"<pre>";
-             print_r($request->all());
+              echo"<pre>";
+              print_r($request->all());
+              echo"<pre>";
          }
 }
  
