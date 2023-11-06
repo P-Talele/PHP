@@ -7,12 +7,17 @@
 </head>
 <body>
     <h1> Destructor</h1>
+
+
+      <!--- The destructor method will be called as soon as all references to a particular object are removed or 
+      when the object is explicitly destroyed in any order in shutdown sequence ---
+      We create destructor by using "__destruct" function..--->
     <?php
        class hardware 
        {
          public function  hardware()
          {
-              echo"this product help to shine</br>";
+                echo"this product help to shine</br>";
          }
        }
          class farm extends hardware
@@ -29,8 +34,8 @@
                 }
          }
 
-            $obj=new farm();
-    ?>
+         $obj=new farm();
+    ?>   
 
 
 
