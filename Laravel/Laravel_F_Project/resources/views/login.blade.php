@@ -32,30 +32,33 @@
                           <p>Please login to your account</p>
       
                         <div class="form-outline mb-4">
-                          <input type="email"  name="Username"  id="form2Example11" class="form-control"
+                          <input type="name"  name="First"  id="form2Example11" class="form-control"
                             placeholder="Phone number or email address" />
-                          <label class="form-label" for="form2Example11">Username</label>
+                          <label class="form-label" for="form2Example11">First Name</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                          <input type="name"  name="Middel"  id="form2Example11" class="form-control"
+                            placeholder="Phone number or email address" />
+                          <label class="form-label" for="form2Example11">Middel Name</label>
                         </div>
       
-                         <div class="form-outline mb-4">
-                          <input type="password"password="Password" id="form2Example22" class="form-control" />
-                          <label class="form-label" for="form2Example22">Password</label>
-                         </div>
-      
-                         <div class="text-center pt-1 mb-5 pb-1">
-                          <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
-                            in</button>
-                      
-                        <div class="d-flex align-items-center justify-content-center pb-4">
-                        <button type="submit" class="btn btn-outline-danger">submit</button>
-                        </div>
+                           <div class="form-outline mb-4">
+                           <input type="name"  name="LastName"  id="form2Example11" class="form-control"
+                            placeholder="Phone number or email address" />
+                            <label class="form-label" for="form2Example11">LastName</label>
+                           </div>
+                     
+                   
+
+                           <div class="d-flex align-items-center justify-content-center pb-4">
+                           <button type="submit" class="btn btn-outline-danger">submit</button>
+                          </div>
       
                       </form>
       
                     </div>
                   </div>
-               
-                </div>
+               </div>
               </div>
             </div>
           </div>
