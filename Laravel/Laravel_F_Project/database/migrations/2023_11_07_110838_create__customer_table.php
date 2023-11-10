@@ -11,6 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
+
+      // insert Query 
             Schema::create('_customer', function (Blueprint $table) {
             $table->id("customer_id");
             $table->string("name",60);
@@ -20,7 +22,7 @@ return new class extends Migration
             $table->date("dob")->nullable();
             $table->string("password");
             $table->boolean("status")->default(0);
-            $table->timestamps();
+            $table->timestamps(); 
         });
     }
 
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_customer');
+         Schema::dropIfExists('_customer');  
     }
 };
