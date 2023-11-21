@@ -6,7 +6,6 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use \App\Models\Customer;
 use \Faker\Factory  as Faker;   
-
 class CustomerSeeder extends Seeder
 {
     /**

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
  use App\Models\Customer;
-use Illuminate\Http\Request;
+ use Illuminate\Http\Request;
 
 class Customer_Controller extends Controller
 {
@@ -11,8 +11,8 @@ class Customer_Controller extends Controller
         
                   echo"<pre>";
                   $custermer=Customer::all();
-                  echo"<pre>";
-                  print_r($custermer->toArray());
+                   echo"<pre>";
+                   print_r($custermer->toArray());
       
      }
 }
