@@ -9,10 +9,10 @@ class Customer_Controller extends Controller
       public function customer()
       {   
         
-                  echo"<pre>";
-                  $custermer=Customer::all();
-                   echo"<pre>";
-                   print_r($custermer->toArray());
+                    echo"<pre>";
+                    $custermer=Customer::all();
+                    echo"<pre>";
+                     print_r($custermer->toArray());
       
      }
 }
