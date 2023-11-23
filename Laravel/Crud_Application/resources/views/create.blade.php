@@ -11,7 +11,7 @@
   
 <form action="{{url('/')}}/insert"method="post">  
    @csrf     
-          <div class="form-group">      
+           <div class="form-group">      
               <label for="first_name">First Name:</label><br/><br/>  
               <input type="text" class="form-control" name="first_name"/><br/><br/>  
           </div>  

@@ -6,9 +6,10 @@ use App\Http\Controllers\CrudsController;
 
 // insert -----
 
-Route::get('/insert', [CrudsController::class ,'index']);
-Route::post('/insert', [CrudsController::class ,'store']);
-Route::get('/show', [CrudsController::class ,'indexx']);
+ Route::get('/insert', [CrudsController::class ,'index']);
+ Route::post('/insert', [CrudsController::class ,'store']); 
+ Route::get('/show', [CrudsController::class ,'indexx']);
+ //Route::get('/show',[CrudsController::class,'show']);
 
 
 

@@ -29,20 +29,8 @@ Qualifications </td>
             <td>{{$crud->last_name}}</td>  
             <td>{{$crud->gender}}</td>  
             <td>{{$crud->qualifications}}</td>  
-<td >  
-<form action="{{ route('users.destroy', $crud->id)}}" method="post">  
-                  @csrf  
-                  @method('DELETE')  
-                  <button class="btn btn-danger" type="submit">Delete</button>  
-                </form>  
-</td>  
-<td >  
-<form action="{{ route('users.edit', $crud->id)}}" method="GET">  
-                  @csrf  
-                   
-                  <button class="btn btn-danger" type="submit">Edit</button>  
-                </form>  
-</td>  
+
+          </td>  
   
          </tr>  
 @endforeach  

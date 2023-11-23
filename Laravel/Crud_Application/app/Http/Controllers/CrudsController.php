@@ -13,17 +13,19 @@ class CrudsController extends Controller
           return view("create");
       }
     //
-    public function store(Request $request)  
+    // insert Query 
+          public function store(Request $request)  
    
-    {  
+       {  
         
        
-         $request->validate([  
+             $request->validate
+             ([  
              'first_name'=>'required',  
              'last_name'=>'required',  
              'gender'=>'required',  
              'qualifications'=>'required'  
-         ]);  
+              ]);  
   
         $crud = new Crud;  
         $crud->first_name =  $request->get('first_name');  
@@ -33,13 +35,15 @@ class CrudsController extends Controller
         $crud->save();  
 
     }
-
+       // Select Query 
         public function indexx()  
     {  
-        $cruds = Crud::all();  
-  
-        return view('index', compact('cruds'));  
+        $cruds = Crud::all();   
+        return view('index',compact('cruds'));  
     }  
+
+
+  
 
         
   
