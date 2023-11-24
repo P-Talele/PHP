@@ -15,21 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+        return $request->user();
     });
 
  Route::get("/user",function()
-  {
-       return  response()->json("login  succes");
-  });
+   {
+            return  response()->json("login  succes");
+   });   
 
- Route::post("/user",function()
-  {
-         return "welcome to php ";
-  });
+   Route::post("/user",function()
+   { 
+            return response()->json(" post method =login already ");
+   });
     Route::delete("/user/{id}",function($id)
    {
-       return response()->json("Delete method".$id ,200);
+             return response()->json("Delete method".$id ,200);
    });
    
    Route::put("/user/{id}",function($id)
