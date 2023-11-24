@@ -16,4 +16,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
-});
+    });
+
+ Route::get("/user",function()
+  {
+       return  response()->json("login  succed");
+  });
+
+ Route::post("/user",function()
+  {
+         return "welcome to php ";
+  });
+    Route::delete("/user/{id}",function($id)
+   {
+       return response()->json("Delete method".$id ,200);
+   });
+   
+   Route::put("/user/{id}",function($id)
+   {
+       return response()->json("put method".$id, 200);
+   });
