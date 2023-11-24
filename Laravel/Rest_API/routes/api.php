@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
  Route::get("/user",function()
   {
-       return  response()->json("login  succed");
+       return  response()->json("login  succes");
   });
 
  Route::post("/user",function()
@@ -34,5 +34,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
    
    Route::put("/user/{id}",function($id)
    {
-       return response()->json("put method".$id, 200);
+         return response()->json("put method".$id, 200);
    });
