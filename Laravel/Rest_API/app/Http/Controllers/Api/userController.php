@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use  Illuminate\Support\Facades\Validator;
 
 class userController extends Controller
 {
@@ -28,10 +28,27 @@ class userController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
+       
     {
         
-    }
+           
+        $validator = Validator::make($request->all(), [
+            "id" => ["required"],
+            "name" => ["required"],
+            "surname" => ["required"],
+            "contact" => ["required"],
+            "password" => ["required"],
+            "password_confirmation" => ['required', 'confirmed']
+        ]);
+        
 
+             if($validator->fails())
+             {
+                 return response()->json([$validator->messages(),400]);
+             }
+
+           p($request->all());
+     }    
     /**
      * Display the specified resource.
      */

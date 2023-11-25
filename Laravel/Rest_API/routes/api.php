@@ -37,7 +37,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
          return response()->json("put method".$id, 200);
    });
 
-   
+
+
+    Route::post('user/store','App\Http\Controllers\Api\userController@store');
+
+    
+    
+     Route::get("/test",function()
+     {
+        p("function is working");
+     });
    
 
      
