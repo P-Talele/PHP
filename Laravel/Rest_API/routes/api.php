@@ -19,25 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
         return $request->user();
     });
 
- Route::get("/user",function()
-   {
-            return  response()->json("login  succes");
-   });   
-
-   Route::post("/user",function()
-   { 
-            return response()->json(" post method =login already ");
-   });
-    Route::delete("/user/{id}",function($id)
-   {
-             return response()->json("Delete method".$id ,200);
-   });
    
-   Route::put("/user/{id}",function($id)
-   {
-         return response()->json("put method".$id, 200);
-   });
-
 
     // this is post API 
      Route::post('user/store','App\Http\Controllers\Api\userController@store');
@@ -46,15 +28,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     // get  single user  Information 
      Route::get("user/show/{id}",[userController::class,"show"]);   
     // Delete Single User Information 
-    Route::delete("user/delete/{id}",[userController::class,"destroy"]);
+     Route::delete("user/delete/{id}",[userController::class,"destroy"]);
+    // Update for all  colums 
+     Route::put("user/update/{id}",[userController::class,"update"]);
 
-    
-    
-     Route::get("/test",function()
-     {
-        p("function is working");
-     });
+     Route::patch("user/updateName/{id}",[userController::class,"changeName"]);
+
+
    
+    
+    
 
      
 
