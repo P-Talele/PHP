@@ -13,7 +13,7 @@ class userController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
+    {    
           $users=User::all();
             if(count($users)>0){
               $response =[
@@ -94,18 +94,18 @@ class userController extends Controller
                        return response()->json(
                          [
                         "massage"," user resister successfully",200,
-                     ]);
+                       ]);
                    }
                    else
                   {
-                       return response()->json(
+                         return response()->json(
                          [
                             "massege","User not Resister Succesfully",500,
                          ]);
                  }
                }
 
-                  p($request->all());
+                      p($request->all());
 
 
      }    
@@ -127,7 +127,7 @@ class userController extends Controller
          {
              $response=[
                  "massege","user found",
-                 "status",1,
+                 "status",1, 
                  "data",  $user,             
             ];
          }
@@ -151,11 +151,13 @@ class userController extends Controller
             $user=User::find($id);
             if(is_null($user))
             {
-                 $response=[
-                          "massege"=>["user not found",200],
-                          "status"=>0,
-                           ];
+                 $response =[
+                    
+                        "massege"=>"user not found in DB",200,
+                        "status"=>0,
+                        
 
+                 ];
             }
              else
             {
@@ -165,9 +167,9 @@ class userController extends Controller
                    DB::commit();
                    $response=
                    [
-                       "massege" => "user succesfully delete",
-                       "status"  =>1,
-                       "data"=>$user,
+                        "massege" => "user succesfully delete",
+                        "status"  =>1,
+                        "data"=>$user,
                       
                     ];
                 
@@ -175,8 +177,11 @@ class userController extends Controller
                  }
                  catch(\Exception $e)
                  {
-                     Db::rollBack();
+                        Db::rollBack();
                  }
             }
+
+              return response()->json([$response,200]);
+
     }
-}
+}   
