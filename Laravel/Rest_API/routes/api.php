@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+Use App\Http\Controllers\Api\userController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,8 +39,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
    });
 
 
-
+    // this is post API 
     Route::post('user/store','App\Http\Controllers\Api\userController@store');
+    Route::get("user/data",[userController::class,"index"]);
+
 
     
     

@@ -55,7 +55,7 @@ class userController extends Controller
                    DB::beginTransaction();
                    $data=
                       [
-                     "name"=>$request->name,
+                      "name"=>$request->name,
                       "gender"=>$request->gender, 
                       "gmail"=>$request->gmail,
                       "phone"=>$request->phone,
