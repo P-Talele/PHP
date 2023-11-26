@@ -14,8 +14,23 @@ class userController extends Controller
      */
     public function index()
     {
-        //
-    }
+          $users=User::all();
+            if(count($users)>0){
+              $response =[
+                        "massege"=>count($users)."data found",
+                         "status",1,
+                         "data",$users
+                         ];
+                  }
+            else   
+                 {
+             $response =[
+                        "massege"=>count($users)."data found",
+                        "status"=>0,
+                        ];
+                 }
+                 return response()->json([$response , 200]);
+            }
 
     /**
      * Show the form for creating a new resource.
@@ -68,27 +83,27 @@ class userController extends Controller
                        $user=User::create($data);
                        DB::commit();
 
-                 }catch( \Exception $e)
-                { 
+                     }catch( \Exception $e)
+                     { 
                        DB::rollBack();
                        p($e->getMessage());
                        $user=null;
-                 }
-                  if($user != null)
+                     }
+                    if($user != null)
+                    {
+                       return response()->json(
+                         [
+                        "massage"," user resister successfully",200,
+                     ]);
+                   }
+                   else
                   {
                        return response()->json(
                          [
-                         "massage"," user resister successfully",200,
-                     ]);
-                  }
-                  else
-                  {
-                        return response()->json(
-                         [
-                             "massege","User not Resister Succesfully",500,
+                            "massege","User not Resister Succesfully",500,
                          ]);
                  }
-             }
+               }
 
                   p($request->all());
 
@@ -97,32 +112,71 @@ class userController extends Controller
     /**
      * Display the specified resource.
      */
+    // get single user Information
     public function show(string $id)
     {
-        //
+         $user=User::find($id);
+         if(is_null($user))
+         {
+           $response=[
+               "massage","user not found",
+               "status",0  
+           ];
+         }
+         else
+         {
+             $response=[
+                 "massege","user found",
+                 "status",1,
+                 "data",  $user,             
+            ];
+         }
+          return response()->json([$response,200]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+  
     public function edit(string $id)
     {
-        //
+        
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+  
     public function update(Request $request, string $id)
     {
-        //
+        
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+            $user=User::find($id);
+            if(is_null($user))
+            {
+                 $response=[
+                          "massege"=>["user not found",200],
+                          "status"=>0,
+                           ];
+
+            }
+             else
+            {
+                 DB::beginTransaction();
+                 try{
+                   $user->delete();
+                   DB::commit();
+                   $response=
+                   [
+                       "massege" => "user succesfully delete",
+                       "status"  =>1,
+                       "data"=>$user,
+                      
+                    ];
+                
+
+                 }
+                 catch(\Exception $e)
+                 {
+                     Db::rollBack();
+                 }
+            }
     }
 }

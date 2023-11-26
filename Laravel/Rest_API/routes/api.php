@@ -40,9 +40,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
     // this is post API 
-    Route::post('user/store','App\Http\Controllers\Api\userController@store');
-    Route::get("user/data",[userController::class,"index"]);
-
+     Route::post('user/store','App\Http\Controllers\Api\userController@store');
+    // this is get API 
+     Route::get("user/data",[userController::class,"index"]);
+    // get  single user  Information 
+     Route::get("user/show/{id}",[userController::class,"show"]);   
+    // Delete Single User Information 
+    Route::delete("user/delete/{id}",[userController::class,"destroy"]);
 
     
     
