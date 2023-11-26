@@ -17,16 +17,9 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-         'name',
-         'class',
-         'gmail',
-         'phone',
-         'address',
-         'country',
-         'state',
-         'gender',
-     ];   
+      protected $table="userr";
+     protected $fillable = ["name","gender","gmail","phone","address","country","state"]; 
+     use HasFactory;  
 
     /**
      * The attributes that should be hidden for serialization.
