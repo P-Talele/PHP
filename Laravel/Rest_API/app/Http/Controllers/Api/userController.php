@@ -97,7 +97,7 @@ class userController extends Controller
                      }
                     else
                     {
-                         return response()->json(
+                         return response()->json(     
                          [
                             "massege","User not Resister Succesfully",500,
                          ]);

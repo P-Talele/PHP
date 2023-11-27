@@ -34,7 +34,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
      Route::patch("user/updateName/{id}",[userController::class,"changeName"]);
 
-
    
     
     
