@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Exception;
 use  Illuminate\Support\Facades\Validator;
-Use Illuminate\Support\Facades\DB; 
+Use Illuminate\Support\Facades\DB;     
 
 class userController extends Controller
 {
@@ -145,9 +145,9 @@ class userController extends Controller
         if(is_null($user))
         {
           // user does not exist
-          return  response()->json([
-            "massege"=>"user not found",
-            "Status"=>0,
+            return  response()->json([
+             "massege"=>"user not found",
+              "Status"=>0,
             ]);  
         } else
           {
@@ -241,7 +241,8 @@ class userController extends Controller
               "massege"=>"user not found",
               "Status"=>0,
                   ]);
-           } else
+           } 
+           else
            {
               DB::beginTransaction();
               try{
