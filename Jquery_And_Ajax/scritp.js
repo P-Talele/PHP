@@ -1,7 +1,7 @@
 $('#btnSubmit').click(function() {
     $.ajax({
       type: 'GET',
-      url: 'https://api.myjson.com/bins/1bsew',
+      url: 'https://health.data.ny.gov/resource/nvtm-yit2.json',
       dataType: 'json',
       success: function(maindata) {
         if(maindata){
