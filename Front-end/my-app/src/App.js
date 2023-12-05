@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App()    
+{
+    const [data, setData] = useState({});
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch('https://example.com/api/data', {
+      method: 'POST',
+      body: JSON.stringify(data),    
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const result = await response.json();
+    console.log(result);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input type="text" onChange={e => setData({...data, name: e.target.value})} />
+      <button type="submit">Submit</button>
+    </form> 
   );
 }
 
